@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CLN - Shoes</title>
+
+  <style>
+    /* PAGE FADE IN */
+    body {
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* PRODUCT SLIDE IN */
+    article {
+      animation: slideUp 0.8s ease forwards;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* CARD HOVER */
+    article:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+
+    /* IMAGE ZOOM */
+    article img {
+      transition: transform 0.3s ease;
+    }
+
+    article:hover img {
+      transform: scale(1.1);
+    }
+
+    /* BUTTON ANIMATION */
+    button {
+      position: relative;
+      overflow: hidden;
+      transition: background 0.3s ease, transform 0.2s ease, color 0.3s ease;
+    }
+
+    button:hover {
+      background:#4e0000;
+      color:white;
+      transform: scale(1.05);
+    }
+
+    /* RIPPLE EFFECT */
+    button::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(255,255,255,0.4);
+      top: 0;
+      left: -100%;
+      transition: left 0.4s ease;
+    }
+
+    button:active::after {
+      left: 0;
+    }
+
+    /* CART BOUNCE */
+    .cart:hover {
+      animation: bounce 0.6s;
+    }
+
+    @keyframes bounce {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+  </style>
+</head>
+
+<body style="margin:0; font-family:serif; background-color: #faf6f2">
+
+<header style="
+  background:#353333;
+  padding:20px;
+  font-size:32px;
+  font-weight:bold;
+  position:relative;
+  text-align:center;
+  color: #efe6de;
+">
+  <h3 style="font-family:Georgia;">CLN</h3>
+
+  <!-- CART -->
+  <span class="cart" style="
+    position:absolute;
+    top:20px;
+    right:20px;
+    font-size:22px;
+    font-weight:bold;
+    cursor:pointer;
+    color: #efe6de;
+  ">
+    🛒 
+  </span>
+</header>
+
+<nav style="text-align:center; margin:20px 0;">
+  <a href="index.html" style="margin:0 15px; font-weight:bold; text-decoration:none; color:black;">Bags</a>
+  <a href="wallets.html" style="margin:0 15px; font-weight:bold; text-decoration:none; color:black;">Wallets</a>
+  <a href="Shoes.html" style="margin:0 15px; font-weight:bold; text-decoration:none; color:rgb(169,139,139);">Shoes</a>
+</nav>
+
+<h2 style="text-align:center;">Shoes</h2>
+
+<section style="
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:40px;
+  max-width:900px;
+  margin:40px auto;
+  justify-items:center;
+">
+
+  <!-- PRODUCT 1 -->
+  <article style="width:260px; text-align:center; padding:20px; border:1px solid #ccc; border-radius:16px;">
+    <img src="Images/orleans mary jane.png" style="width:200px; height:260px; object-fit:cover;">
+    <p style="font-weight:bold;">Orleans Mary Janes <br> ₱999.00 <br> 28% off</p>
+    <button style="background:#00000044; border:none; padding:8px 24px; border-radius:20px; font-weight:bold;">Add to Cart</button>
+  </article>
+
+  <!-- PRODUCT 2 -->
+  <article style="width:260px; text-align:center; padding:20px; border:1px solid #ccc; border-radius:16px;">
+    <img src="Images/staku lace up.png" style="width:200px; height:260px; object-fit:cover;">
+    <p style="font-weight:bold;">Staku Lace-up Sneakers <br> ₱1,199.00 <br> 10% off</p>
+    <button style="background:#00000044; border:none; padding:8px 24px; border-radius:20px; font-weight:bold;">Add to Cart</button>
+  </article>
+
+  <!-- PRODUCT 3 -->
+  <article style="width:260px; text-align:center; padding:20px; border:1px solid #ccc; border-radius:16px;">
+    <img src="Images/jenicca bellerinas.png" style="width:200px; height:260px; object-fit:cover;">
+    <p style="font-weight:bold;">Jennica Ballerinas <br> ₱1,039.00 <br> 20% off</p>
+    <button style="background:#00000044; border:none; padding:8px 24px; border-radius:20px; font-weight:bold;">Add to Cart</button>
+  </article>
+
+  <!-- PRODUCT 4 -->
+  <article style="width:260px; text-align:center; padding:20px; border:1px solid #ccc; border-radius:16px;">
+    <img src="Images/glen lace up.png" style="width:200px; height:260px; object-fit:cover;">
+    <p style="font-weight:bold;">Glen Lace-up Sneakers <br> ₱999.00 <br> 10% off</p>
+    <button style="background:#00000044; border:none; padding:8px 24px; border-radius:20px; font-weight:bold;">Add to Cart</button>
+  </article>
+
+  <!-- PRODUCT 5 -->
+  <article style="width:260px; text-align:center; padding:20px; border:1px solid #ccc; border-radius:16px;">
+    <img src="Images/ilya lace up.png" style="width:200px; height:260px; object-fit:cover;">
+    <p style="font-weight:bold;">Ilya Lace-up Sneakers <br> ₱1,199.00 <br> 10% off</p>
+    <button style="background:#00000044; border:none; padding:8px 24px; border-radius:20px; font-weight:bold;">Add to Cart</button>
+  </article>
+
+  <!-- PRODUCT 6 -->
+  <article style="width:260px; text-align:center; padding:20px; border:1px solid #ccc; border-radius:16px;">
+    <img src="Images/edzel mary jane.png" style="width:200px; height:260px; object-fit:cover;">
+    <p style="font-weight:bold;">Edzel Mary Janes <br> ₱1,199.00 <br> 10% off</p>
+    <button style="background:#00000044; border:none; padding:8px 24px; border-radius:20px; font-weight:bold;">Add to Cart</button>
+  </article>
+
+</section>
+
+</body>
+</html>
